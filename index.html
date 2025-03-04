@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT University Quy Nhơn Blood Donation - Save Lives</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/vi/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg" alt="FPT University Logo" class="logo-img">
+             REDHOPE
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#find">Find a Drive</a></li>
+                <li><a href="#donate">Donate Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Join FPTU Quy Nhơn Blood Donation, Save Lives</h1>
+            <p>Students, lecturers, and staff – unite to save lives with every drop at FPT University Quy Nhơn!</p>
+            <button onclick="scrollToSection('donate')" class="hero-button">Donate Now</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Why Donate Blood at FPT University Quy Nhơn?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Blood donation at FPT University Quy Nhơn supports our community, helping students, lecturers, and staff in medical emergencies. Each donation takes just 10 minutes and can save up to 3 lives. Join our campus-wide initiative to promote health and solidarity!</p>
+                    <ul class="about-benefits">
+                        <li>Boost your health and energy.</li>
+                        <li>Contribute to FPTU Quy Nhơn’s community spirit.</li>
+                        <li>Receive recognition and rewards for your contribution.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://foxnews.fpt.vn/wp-content/uploads/2023/03/Hien-mau.jpg" alt="Students donating blood at FPT University Quy Nhơn" class="optimized-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find a Drive Section -->
+    <section id="find" class="find-drive">
+        <div class="container">
+            <h2>Find a Donation Drive at FPTU Quy Nhơn</h2>
+            <div class="search-box">
+                <input type="text" id="location" placeholder="Enter your campus or location (e.g., FPTU Quy Nhơn)">
+                <button onclick="findDrive()" class="drive-button">Search</button>
+            </div>
+            <p id="result">Enter your campus or location to find a donation drive near you.</p>
+            <div id="map" class="map-placeholder"></div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Ready to Donate at FPTU Quy Nhơn?</h2>
+            <p>Schedule your donation and join FPTU Quy Nhơn’s mission to save lives. Open to all students, lecturers, and staff!</p>
+            <button class="pulse" onclick="openDonationForm()">Schedule Now</button>
+            <div class="donation-form" id="donationForm">
+                <h3>Register as a Donor</h3>
+                <form id="donorForm" onsubmit="submitDonor(event)">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="text" placeholder="Your Location (e.g., FPTU Quy Nhơn)" name="location" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="eligibility">
+        <div class="container">
+            <h2>Who Can Donate at FPTU Quy Nhơn?</h2>
+            <div class="eligibility-content">
+                <div class="eligibility-item">
+                    <h3>Students</h3>
+                    <p>Aged 18-60, healthy, weighing at least 50kg, and not pregnant or recently ill.</p>
+                </div>
+                <div class="eligibility-item">
+                    <h3>Lecturers & Staff</h3>
+                    <p>Healthy adults, no chronic diseases, and meeting weight/health requirements.</p>
+                </div>
+                <div class="eligibility-item">
+                    <h3>General Guidelines</h3>
+                    <p>No tattoos/piercings in the last 6 months, no alcohol 24 hours before, and eat a light meal.</p>
+                </div>
+            </div>
+            <img src="https://images.pexels.com/photos/3184438/pexels-photo-3184438.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Health check for FPTU Quy Nhơn donors" class="optimized-img">
+        </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section class="stories">
+        <div class="container">
+            <h2>Inspiring Stories from FPTU Quy Nhơn</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <img src="https://images.pexels.com/photos/3771852/pexels-photo-3771852.jpeg?auto=compress&cs=tinysrgb&w=300" alt="FPTU Quy Nhơn student donating blood" class="optimized-img">
+                    <h3>Linh’s Impact</h3>
+                    <p>Linh, an FPTU Quy Nhơn student, donated blood and saved a lecturer during an emergency. Read her story!</p>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.pexels.com/photos/3184409/pexels-photo-3184409.jpeg?auto=compress&cs=tinysrgb&w=300" alt="FPTU Quy Nhơn lecturer donating blood" class="optimized-img">
+                    <h3>Professor Nam’s Contribution</h3>
+                    <p>Professor Nam’s regular donations helped students in need. Learn more about his journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact FPTU Quy Nhơn Blood Donation</h2>
+            <p>For more information, email us at <a href="mailto:qnuni@fe.edu.vn">qnuni@fe.edu.vn</a> or call <a href="tel:(0256)7300999">(0256) 7300 999</a>.</p>
+            <form id="contactForm" onsubmit="submitContact(event)">
+                <input type="text" placeholder="Your Name" name="name" required>
+                <input type="email" placeholder="Your Email" name="email" required>
+                <textarea placeholder="Your Message" name="message" required></textarea>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+            <p class="address">Address: Khu đô thị mới An Phú Thịnh, Phường Nhơn Bình & Phường Đống Đa, TP. Quy Nhơn, Bình Định</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 FPT University Quy Nhơn Blood Donation. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
